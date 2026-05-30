@@ -1,0 +1,30 @@
+
+=== K cache: SQNR (dB), 跨 28 层 mean +/- std (越高越好) ===
+  granularity        mean      std   #scales/layer
+  per-tensor        29.18     1.51               1
+  per-head          31.14     1.41             H=8
+  per-token         35.64     2.38             H*S
+  per-channel       46.17     1.89           H*128
+
+=== V cache: SQNR (dB), 跨 28 层 mean +/- std (越高越好) ===
+  granularity        mean      std   #scales/layer
+  per-tensor        31.51     3.78               1
+  per-head          34.38     2.57             H=8
+  per-token         42.04     0.60             H*S
+  per-channel       41.49     0.82           H*128
+
+
+=== 离群结构 (跨层 mean) ===
+                                 K         V
+  channel 集中度            13.62      2.44   (max/median channel absmax; 高=有离群channel)
+  token 集中度                1.60      3.40   (max/median token absmax)
+  skew |mean|/std        0.015     0.008   (高=偏离0, asymmetric 更优)
+
+
+=== 结论 (数据驱动) ===
+  K cache 最佳细粒度: per-channel  (per-channel 比 per-token 高 +10.52 dB)
+  V cache 最佳细粒度: per-token  (per-token 比 per-channel 高 +0.54 dB)
+  vs KIVI 共识 (K per-channel, V per-token): K 符合, V 符合
+  若工程上用 per-head (scale 能干净外提出 matmul):
+    K 相比最佳损失 15.02 dB, V 损失 7.65 dB
+    -> 这就是 Step 2 算子 '用 per-head 换可实现性' 牺牲掉的精度, 可量化、可辩护
