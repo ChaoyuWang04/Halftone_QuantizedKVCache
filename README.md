@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/ChaoyuWang04/QuantizedKVCache">
+  <a href="https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache">
     <img src="images/logo.jpg" alt="Halftone banner" width="100%">
   </a>
 
@@ -100,7 +100,7 @@ Halftone/
 ## Setup
 
 ```sh
-git clone https://github.com/ChaoyuWang04/QuantizedKVCache.git
+git clone https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache.git
 cd QuantizedKVCache
 uv venv
 # install a CUDA-matched torch wheel first, then:
@@ -151,7 +151,7 @@ Issues and pull requests are welcome. The highest-leverage areas:
 
 ## Links
 
-- Project: [https://github.com/ChaoyuWang04/QuantizedKVCache](https://github.com/ChaoyuWang04/QuantizedKVCache)
+- Project: [https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache](https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache)
 - Author: [Chaoyu Wang](https://www.linkedin.com/in/samwang04/)
 
 ## License
