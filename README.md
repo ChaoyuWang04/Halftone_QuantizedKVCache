@@ -101,7 +101,7 @@ Halftone/
 
 ```sh
 git clone https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache.git
-cd QuantizedKVCache
+cd Halftone_QuantizedKVCache
 uv venv
 # install a CUDA-matched torch wheel first, then:
 uv pip install -e .
