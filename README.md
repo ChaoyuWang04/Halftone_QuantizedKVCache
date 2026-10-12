@@ -9,8 +9,8 @@
 <p align="center">
   Data-driven INT8 KV-cache quantization for LLM decoding — SQNR profiling of real K/V distributions to select granularity, a physically int8-backed HF cache with near-lossless perplexity (+0.2%), and hand-written fused Triton kernels for quantize-on-write and flash-style int8 decode attention, reaching 1.56× of the 2× bandwidth ceiling with the gap fully attributed to occupancy.
   <br /><br />
-  | <a href="https://github.com/ChaoyuWang04/AdCampaignAgent-SFT/issues/new?labels=bug&template=bug-report---.md">Report Bug</a> |
-  <a href="https://github.com/ChaoyuWang04/AdCampaignAgent-SFT/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> |
+  | <a href="https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache/issues/new?labels=bug">Report Bug</a> |
+  <a href="https://github.com/ChaoyuWang04/Halftone_QuantizedKVCache/issues/new?labels=enhancement">Request Feature</a> |
 </p>
 
 </div>
